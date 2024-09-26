@@ -1,0 +1,13 @@
+.Rproj.user
+
+# Ignore Excel temp files
+~$*
+~$*
+
+# Ignore macOS .DS_Store files
+
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto

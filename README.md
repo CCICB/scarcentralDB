@@ -1,0 +1,104 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# scarcentralDB
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+> \[!WARNING\]  
+> This package is in early development and not yet ready for use
+
+scarcentralDB is a database of molecular features associated with
+distinct processes of tumour development.
+
+## Installation
+
+You can install the development version of scarcentralDB like so:
+
+``` r
+if(!require(pak)){ install.packages("pak") }
+pak::pak("selkamand/scarcentralDB")
+```
+
+## Quick Start
+
+``` r
+library(scarcentralDB)
+
+# See all processes and scars in sigcentral
+scarcentraldb <- scarcentral()
+head(scarcentraldb)
+#> [[1]]
+#> ==============================================
+#> Process:  Radiotherapy 
+#> ==============================================
+#> Description:  Damage caused by ionizing radiation therapy, typically seen in post-treatment tumors. 
+#> 
+#> Scars:  6 
+#> Modalities:  DNA, RNA 
+#> 
+#> [[2]]
+#> ==============================================
+#> Process:  Methytransferase Dysfunction 
+#> ==============================================
+#> Description:  Global methylation disrupted by DNMT3A dysfunction. Common in Leukaemia. 
+#> 
+#> Scars:  2 
+#> Modalities:  Methylation
+```
+
+## For Developers
+
+``` r
+ # Creating two scars for Radiotherapy
+ high_indel_burden <- new_scar(
+   process = "Radiotherapy",
+   scar_name = "High Indel Burden",
+   marker_of = "Radiation Induced Damage",
+   disease_specificity = "Pan-Cancer",
+   diseases = "cancer",
+   modality = "DNA",
+   measurement = "INDEL / SBS ratio",
+   description = "Higher number of INDELS driven by an increased burden of deletions.",
+   experiment = "Analysis of 12 radiation-associated tumors compared to radiation-naive tumors",
+   paper_url = "https://www.nature.com/articles/ncomms12605",
+   specificity = "Low",
+   specificity_tooltip = "Also observed in BRCA1/BRCA2 breast cancer.",
+   sensitivity = "Moderate",
+   sensitivity_tooltip = "All radiation tumors had values exceeding the median for their cancer type.",
+   tool_name = "raDNA",
+   tool_url = "https://github.com/selkamand/radna"
+ )
+
+ high_deletion_burden <- new_scar(
+   process = "Radiotherapy",
+   scar_name = "High Deletion Burden",
+   marker_of = "Radiation Induced Damage",
+   disease_specificity = "Pan-Cancer",
+   diseases = "cancer",
+   modality = "DNA",
+   measurement = "Deletion / Insertion ratio",
+   description = "Higher number of small deletions (1-100bp) particularly in regions of microhomology.",
+   experiment = "Analysis of 12 radiation-associated tumors from 3 cancer types compared to radiation-naive tumors",
+   paper_url = "https://www.nature.com/articles/ncomms12605",
+   specificity = "Low",
+   specificity_tooltip = "Also observed in BRCA1/BRCA2 breast cancer.",
+   sensitivity = "Moderate",
+   sensitivity_tooltip = "11/12 tumors had values exceeding the median for their cancer type.",
+   tool_name = "raDNA",
+   tool_url = "https://github.com/selkamand/radna"
+ )
+
+ # Create the Radiotherapy process object with two scars
+ radiotherapy_process <- new_process(
+   name = "Radiotherapy",
+   description = "Damage caused by ionizing radiation therapy, typically seen in post-treatment tumors.",
+   class = "exogenous",
+   icon = "faRadiation",
+   flip_vertical = FALSE,
+   flip_horizontal = TRUE,
+   scars = list(high_indel_burden, high_deletion_burden)
+ )
+```

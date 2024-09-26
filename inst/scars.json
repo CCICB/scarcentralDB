@@ -1,0 +1,161 @@
+{
+    "Methytransferase Dysfunction": {
+        "CpG flanking sequence preferences": [
+            {
+                "Process": "Methytransferase Dysfunction",
+                "ScarName": "CpG flanking sequence preferences",
+                "MarkerOf": "DNMT3A R88H",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "Meth",
+                "Measurement": "Proportion of methylated CpGs in R882/WT preferred contexts",
+                "Description": "DNMT3A R882H and similar mutations change the CpG flanking sequence preferences.",
+                "Experiment": "Libraries containing CpG in 10nt random context were exposed to mutant/WT methyltransferases then bisulfite sequenced.",
+                "Specificity": "unknown",
+                "OtherProcesses": "Yet to be systematically evaluated",
+                "Sensitivity": "unknown",
+                "SensitivityTooltip": "Yet to be systematically evaluated",
+                "PaperURL": "https://doi.org/10.1093/nar/gkz911"
+            }
+        ],
+        "Hemimethylation Burden": [
+            {
+                "Process": "Methytransferase Dysfunction",
+                "ScarName": "Hemimethylation Burden",
+                "MarkerOf": "Low DNMT1 activity",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "Meth",
+                "Measurement": "Proportion of CpGs which are hemimethylated",
+                "Description": "DNMT1 maintenance methyltransferase should decrease hemimethylation",
+                "Specificity": "unknown",
+                "OtherProcesses": "Yet to be systematically evaluated",
+                "Sensitivity": "unknown",
+                "SensitivityTooltip": "Yet to be systematically evaluated",
+                "ToolName": "hemimeth"
+            }
+        ]
+    },
+    "Radiotherapy": {
+        "Clonal Deletions": [
+            {
+                "Process": "Radiotherapy",
+                "ScarName": "Clonal Deletions",
+                "MarkerOf": "Radiation Induced Cancer",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "DNA",
+                "Measurement": "Clonal/Subclonal ratio of Deletions to Insertions",
+                "Description": "Radiation Induced Cancers have early and clonal radiation induced mutations.  ",
+                "Experiment": "Analysis of 12 radiation-associated tumours from 3 cancer types compared to radiation-naive tumours",
+                "Specificity": "low",
+                "OtherProcesses": "Clonal radiation-induced mutations are not unique to non-radiation induced cancer. For example, a radiotherapy-damaged subclone may simply expand due to radiosensitivity of the dominant clone.",
+                "Sensitivity": "high",
+                "SensitivityTooltip": "3/3 tumours with subclones, deletions were significantly increased compared with insertions amongst clonal mutations in all three cases",
+                "PaperURL": "https://www.nature.com/articles/ncomms12605",
+                "ToolURL": "https://github.com/selkamand/radna",
+                "ToolName": "raDNA"
+            }
+        ],
+        "Glioblastoma Expression Signature": [
+            {
+                "Process": "Radiotherapy",
+                "ScarName": "Glioblastoma Expression Signature",
+                "MarkerOf": "Radiation Induced Glioblastoma",
+                "DiseaseSpecificity": "Disease Specific",
+                "Diseases": "glioblastoma",
+                "Scars.(DNA/RNA/Meth)": "RNA",
+                "Measurement": "Proportion of RIG-associated genes overexpressed",
+                "Description": "Paediatric glioblastomas were shown to have a pattern of expression distinct from those that spontaneuosly arise",
+                "Experiment": "gene expression microarray profiling of 5 paediatric radiation induced glioblastomas compared to spontaneous tumours",
+                "Specificity": "unknown",
+                "OtherProcesses": "Yet to be systematically evaluated",
+                "Sensitivity": "unknown",
+                "SensitivityTooltip": "Yet to be systematically evaluated",
+                "PaperURL": "https://doi.org/10.1097/nen.0b013e3181257190",
+                "ToolURL": "https://github.com/CCICB/rig",
+                "ToolName": "RIG"
+            }
+        ],
+        "High Deletion Burden": [
+            {
+                "Process": "Radiotherapy",
+                "ScarName": "High Deletion Burden",
+                "MarkerOf": "Radiation Induced Damage",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "DNA",
+                "Measurement": "Deletion / Insertion ratio",
+                "Description": "Higher number of small deletions (1-100bp) particularly in reagions of microhomology",
+                "Experiment": "Analysis of 12 radiation-associated tumours from 3 cancer types compared to radiation-naive tumours",
+                "Specificity": "low",
+                "OtherProcesses": "Also observed in BRCA1/BRCA2 breast cancer",
+                "Sensitivity": "moderate",
+                "SensitivityTooltip": "11/12 tumours had values exceeding the median for their cancer type",
+                "PaperURL": "https://www.nature.com/articles/ncomms12605",
+                "ToolURL": "https://github.com/selkamand/radna",
+                "ToolName": "raDNA"
+            }
+        ],
+        "High Indel Burden": [
+            {
+                "Process": "Radiotherapy",
+                "ScarName": "High Indel Burden",
+                "MarkerOf": "Radiation Induced Damage",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "DNA",
+                "Measurement": "INDEL / SBS ratio",
+                "Description": "Higher number of INDELS. Driven by an increased burden of deletions, not insertions.",
+                "Experiment": "Analysis of 12 radiation-associated tumours from 3 cancer types compared to radiation-naive tumours",
+                "Specificity": "low",
+                "OtherProcesses": "Also observed in BRCA1/BRCA2 breast cancer",
+                "Sensitivity": "moderate",
+                "SensitivityTooltip": "All radiation tumours had values exceeding the median for their cancer type",
+                "PaperURL": "https://www.nature.com/articles/ncomms12605",
+                "ToolURL": "https://github.com/selkamand/radna",
+                "ToolName": "raDNA"
+            }
+        ],
+        "Increased balanced inversions": [
+            {
+                "Process": "Radiotherapy",
+                "ScarName": "Increased balanced inversions",
+                "MarkerOf": "Radiation Induced Damage",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "DNA",
+                "Measurement": "Any balanced inversions present",
+                "Description": "Balanced inversions, a rare type of rearrangement, were present in 92% (11/12) radiation-associated tumours but only 15% of radiation naïve tumours.",
+                "Experiment": "Analysis of 12 radiation-associated tumours from 3 cancer types compared to radiation-naive tumours",
+                "Specificity": "low",
+                "OtherProcesses": "Present in 58% of BRCA1/2-deficient breast tumours",
+                "Sensitivity": "high",
+                "SensitivityTooltip": "Present in 92% (11/12) radiation-associated tumours but only 15% of radiation naïve tumours.",
+                "PaperURL": "https://www.nature.com/articles/ncomms12605",
+                "ToolURL": "https://github.com/selkamand/radna",
+                "ToolName": "raDNA"
+            }
+        ],
+        "Topography Agnostic Deletions": [
+            {
+                "Process": "Radiotherapy",
+                "ScarName": "Topography Agnostic Deletions",
+                "MarkerOf": "Radiation Induced Damage",
+                "DiseaseSpecificity": "Pan-Cancer",
+                "Diseases": "cancer",
+                "Scars.(DNA/RNA/Meth)": "DNA",
+                "Measurement": "Genome-wide deletion distribution and topographical features",
+                "Description": "Radiation induced deletions appear uniformally across the genome irregardless of replication timing and chromotin structure (unlike most other exogenous mutagens).",
+                "Experiment": "Analysis of 12 radiation-associated tumours from 3 cancer types compared to radiation-naive tumours",
+                "Specificity": "high",
+                "OtherProcesses": "No other mutagenic process has this level of indifference to DNA topography",
+                "Sensitivity": "unknown",
+                "PaperURL": "https://www.nature.com/articles/ncomms12605",
+                "ToolURL": "https://github.com/selkamand/radna",
+                "ToolName": "raDNA"
+            }
+        ]
+    }
+}
+

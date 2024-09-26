@@ -1,0 +1,10 @@
+^scarcentralDB\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+
+# Ignore Excel temp files
+~\$.*
+	
+# Ignore macOS .DS_Store files
+.DS_Store
+^LICENSE\.md$
