@@ -14,3 +14,5 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     assertions
+URL: https://github.com/selkamand/scarcentralDB
+BugReports: https://github.com/selkamand/scarcentralDB/issues
