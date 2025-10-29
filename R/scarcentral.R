@@ -27,7 +27,8 @@
 #' process_1$scars
 scarcentral <- function(){
   list(
-    # Radiotherapy process
+
+    # ======= Radiotherapy ========
     new_process(
       name = "Radiotherapy",
       description = "Damage caused by ionizing radiation therapy, typically seen in post-treatment tumors.",
@@ -146,9 +147,9 @@ scarcentral <- function(){
         )
       )
     ),
-    # Methytransferase Dysfunction process
+    # ======= Methyltransferase Dysfunction ========
     new_process(
-      name = "Methytransferase Dysfunction",
+      name = "Methyltransferase Dysfunction",
       description = "Global methylation disrupted by DNMT3A dysfunction. Common in Leukaemia.",
       class = "endogenous",
       icon = "faTimeline",
@@ -157,7 +158,7 @@ scarcentral <- function(){
       scars = list(
         new_scar(
           scar_name = "CpG Flanking Sequence Preferences",
-          process = "Methytransferase Dysfunction",
+          process = "Methyltransferase Dysfunction",
           marker_of = "DNMT3A R88H",
           disease_specificity = "Pan-Cancer",
           diseases = "cancer",
@@ -175,7 +176,7 @@ scarcentral <- function(){
         ),
         new_scar(
           scar_name = "Hemimethylation Burden",
-          process = "Methytransferase Dysfunction",
+          process = "Methyltransferase Dysfunction",
           marker_of = "Low DNMT1 activity",
           disease_specificity = "Pan-Cancer",
           diseases = "cancer",
@@ -191,6 +192,93 @@ scarcentral <- function(){
           tool_url = NULL,
           tool_name = NULL
         )
+      )
+    ),
+    # ======= Mismatch Repair Deficiency ========
+    new_process(
+      name = "Mismatch Repair Deficiency",
+      description = "Failure to repair small mutations leads to their accumulation in the tumour genome",
+      class = "endogenous",
+      icon = "faShieldHalved",
+      flip_vertical = FALSE,
+      flip_horizontal = FALSE,
+      scars = list(
+        # new_scar(
+        #   scar_name = "Hemimethylation Burden",
+        #   process = "Methyltransferase Dysfunction",
+        #   marker_of = "Low DNMT1 activity",
+        #   disease_specificity = "Pan-Cancer",
+        #   diseases = "cancer",
+        #   modality = "Methylation",
+        #   measurement = "Proportion of CpGs which are hemimethylated",
+        #   description = "DNMT1 maintenance methyltransferase should decrease hemimethylation.",
+        #   experiment = "",
+        #   paper_url = "",
+        #   specificity = "Unknown",
+        #   specificity_tooltip = "Yet to be systematically evaluated",
+        #   sensitivity = "Unknown",
+        #   sensitivity_tooltip = "Yet to be systematically evaluated",
+        #   tool_url = NULL,
+        #   tool_name = NULL
+        # )
+        )
+    ),
+    # ======= Polymerase Proofreading Deficiency ========
+    new_process(
+      name = "Polymerase Proofreading Deficiency",
+      description = "Impaired proofreading of DNA polymerases, particularly Pol ε and Pol δ. This deficiency significantly impacts the fidelity of DNA replication.",
+      class = "endogenous",
+      icon = "faShieldHalved",
+      flip_vertical = FALSE,
+      flip_horizontal = FALSE,
+      scars = list(
+        # new_scar(
+          # scar_name = "Hemimethylation Burden",
+          # process = "Methyltransferase Dysfunction",
+          # marker_of = "Low DNMT1 activity",
+          # disease_specificity = "Pan-Cancer",
+          # diseases = "cancer",
+          # modality = "Methylation",
+          # measurement = "Proportion of CpGs which are hemimethylated",
+          # description = "DNMT1 maintenance methyltransferase should decrease hemimethylation.",
+          # experiment = "",
+          # paper_url = "",
+          # specificity = "Unknown",
+          # specificity_tooltip = "Yet to be systematically evaluated",
+          # sensitivity = "Unknown",
+          # sensitivity_tooltip = "Yet to be systematically evaluated",
+          # tool_url = NULL,
+          # tool_name = NULL
+        # )
+      )
+    ),
+    # ======= Somatic Hypermutation ========
+    new_process(
+      name = "Spliceosome Dysfunction",
+      description = "Impaired proofreading of DNA polymerases, particularly Pol ε and Pol δ. This deficiency significantly impacts the fidelity of DNA replication.",
+      class = "endogenous",
+      icon = "faShieldHalved",
+      flip_vertical = FALSE,
+      flip_horizontal = FALSE,
+      scars = list(
+        # new_scar(
+        # scar_name = "Hemimethylation Burden",
+        # process = "Methyltransferase Dysfunction",
+        # marker_of = "Low DNMT1 activity",
+        # disease_specificity = "Pan-Cancer",
+        # diseases = "cancer",
+        # modality = "Methylation",
+        # measurement = "Proportion of CpGs which are hemimethylated",
+        # description = "DNMT1 maintenance methyltransferase should decrease hemimethylation.",
+        # experiment = "",
+        # paper_url = "",
+        # specificity = "Unknown",
+        # specificity_tooltip = "Yet to be systematically evaluated",
+        # sensitivity = "Unknown",
+        # sensitivity_tooltip = "Yet to be systematically evaluated",
+        # tool_url = NULL,
+        # tool_name = NULL
+        # )
       )
     )
   )
