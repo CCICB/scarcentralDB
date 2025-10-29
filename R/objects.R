@@ -252,7 +252,7 @@ new_process <- function(
 ) {
   # Assertions
   assertions::assert_string(name)
-  assertions::assert_subset(name, valid_processes(), msg = "[{process}] is not a valid process. See {.code valid_processes()} for valid options")
+  assertions::assert_subset(name, valid_processes(), msg = "[{name}] is not a valid process. See {.code valid_processes()} for valid options")
 
   assertions::assert_string(description)
   assertions::assert_string(icon)
@@ -318,8 +318,9 @@ print.process <- function(x, ...){
 #' @examples
 #' valid_processes()
 valid_processes <- function(){
-  c("Radiotherapy", "Recombination", "Methytransferase Dysfunction",
-    "Spliceosome Dysfunction", "Ultraviolet Radiation", "Mismatch Repair deficiency",
+  c("Radiotherapy", "Recombination", "Methyltransferase Dysfunction",
+    "Spliceosome Dysfunction", "Ultraviolet Radiation", "Mismatch Repair Deficiency",
+    "Polymerase Proofreading Deficiency", "Spliceosome Dysfunction",
     "Homologous Repair Deficiency", "APOBEC hyperactivity", "Chemotherapy",
     "Smoking", "Viruses", "Defective Base Excision Repair", "Leaky Checkpoints",
     "ADAR activity", "NHEJ repair", "TOP2A loss", "Sequencing")
